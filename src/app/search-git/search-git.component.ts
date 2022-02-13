@@ -5,6 +5,8 @@ import { Repositories } from "../repositories";
 import { HttpClient } from "@angular/common/http";
 import { Interrepo } from '../interface/repointerface';
 import { Interuser } from '../interface/userinterface';
+import { GitSerchService } from '../git-serch.service';
+import { RepoGitService } from '../repo-git.service';
 
 @Component({
   selector: 'app-search-git',
@@ -13,7 +15,20 @@ import { Interuser } from '../interface/userinterface';
 })
 export class SearchGitComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private gitService: GitSerchService,
+    private gitRepo: RepoGitService,
+    private router: Router
+  ) {}
+  onSubmit(val: any) {
+    if (val.search != "") {
+      this.gitRepo.repoArr = [];
+      this.gitService.getSearchResults(val.search);
+      this.gitRepo.getRepoDetails(val.search);
+      this.router.navigate(["/repos"]);
+    }
+  }
+
 
   ngOnInit(): void {
   }
