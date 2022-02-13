@@ -1,4 +1,4 @@
-export interface IuserProfile {
+export interface Interuser {
     login: string;
     name: string;
     avatar_url: string;

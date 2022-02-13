@@ -1,4 +1,4 @@
-export interface Irepo {
+export interface Interrepo {
     name: string;
     html_url: string;
     description: string;
