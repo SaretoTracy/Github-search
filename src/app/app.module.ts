@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { SearchGitComponent } from './search-git/search-git.component';
 import { RepoComponent } from './repo/repo.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchGitComponent,
     RepoComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
