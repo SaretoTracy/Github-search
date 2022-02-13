@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Router } from "@angular/router";
+
+import { User } from './user';
+import { Repositories } from './repositories';         
 import { HttpClient } from "@angular/common/http";
 import { Interrepo } from './interface/repointerface';
 import { Interuser } from './interface/userinterface';
 import { environment } from "./../environments/environment";
 
-import { User } from './user';
-import { Repositories } from './repositories';
 
 @Injectable({
   providedIn: 'root'
@@ -36,7 +37,7 @@ export class GitSerchService {
             resolve(response);
           },
 
-          (error:any) => {
+          (error) => {
             if (error.status) {
               this.router.navigate(["/err"]);
             }

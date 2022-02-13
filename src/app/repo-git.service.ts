@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from "@angular/router";
+import { User } from './user';
 import { Repositories } from "./repositories";
 import { HttpClient } from "@angular/common/http";
 import { Interrepo } from './interface/repointerface';
@@ -19,8 +20,8 @@ export class RepoGitService {
         .get<Interrepo[]>(`https://api.github.com/users/${user}/repos`)
         .toPromise()
         .then(
-          (response) => {
-            response.forEach((response) => {
+          (response:any) => {
+            response.forEach((response:any) => {
               this.repo = new Repositories(
                 response.name,
                 response.html_url,
