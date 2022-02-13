@@ -12,45 +12,39 @@ import { Repositories } from './repositories';
   providedIn: 'root'
 })
 export class GitSerchService {
-  Interuser: User;
-
+  userProfile: User;
   constructor(private http: HttpClient, private router: Router) {
-    this.Interuser = new User("", "", "", "", 0, 0, 0, "", "", 0, "");
+    this.userProfile = new User("", "", "", "", 0, 0, 0, "", "", 0, "");
   }
-}
-getSearchResults(user: string) {
-  let promise = new Promise((resolve, reject) => {
-    this.http
-      .get<Interuser>(
-        `https://api.github.com/users/${user}?access_toke:${environment.personal_AccessToken}`
-      )
-      .toPromise()
-      .then(
-        (response) => {
-          this.Interuser.userName = response.login;
-          this.Interuser.name = response.name;
-          this.Interuser.bio = response.bio;
-          this.Interuser.followers = response.followers;
-          this.Interuser.following = response.following;
-          this.Interuser.location = response.location;
-          this.Interuser.socialMedia = response.twitter_username;
-          this.Interuser.repositories = response.public_repos;
-          this.Interuser.avatarUrl = response.avatar_url;
-          this.Interuser.repo_url = response.repos_url;
+  getSearchResults(user: string) {
+    let promise = new Promise((resolve, reject) => {
+      this.http
+        .get<Interuser>(`https://api.github.com/users/${user}`)
+        .toPromise()
+        .then(
+          (response:any) =>{ 
+            this.userProfile.userName = response.login;
+            this.userProfile.name = response.name;
+            this.userProfile.bio = response.bio;
+            this.userProfile.followers = response.followers;
+            this.userProfile.following = response.following;
+            this.userProfile.location = response.location;
+            this.userProfile.socialMedia = response.twitter_username;
+            this.userProfile.repositories = response.public_repos;
+            this.userProfile.avatarUrl = response.avatar_url;
+            this.userProfile.repo_url = response.repos_url;
+            resolve(response);
+          },
 
-constructor() { }
-resolve(response);
-},
-
-(error) => {
-  if (error.status) {
-    this.router.navigate(["/err"]);
+          (error:any) => {
+            if (error.status) {
+              this.router.navigate(["/err"]);
+            }
+            reject(error);
+          }
+        );
+    });
+    return promise;
   }
-  reject(error);
-}
-);
-});
-return promise;
-}
 }
 

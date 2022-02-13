@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from "@angular/router";
+import { Repositories } from "./repositories";
 import { HttpClient } from "@angular/common/http";
 import { Interrepo } from './interface/repointerface';
 import { Interuser } from './interface/userinterface';
@@ -15,9 +16,7 @@ export class RepoGitService {
   getRepoDetails(user: string) {
     let promise = new Promise((resolve, reject) => {
       this.http
-        .get<Interrepo[]>(
-          `https://api.github.com/users/${user}/repos?access_token:${environment.personal_AccessToken}`
-        )
+        .get<Interrepo[]>(`https://api.github.com/users/${user}/repos`)
         .toPromise()
         .then(
           (response) => {
@@ -37,7 +36,6 @@ export class RepoGitService {
               }
             });
 
-  constructor() { }
             resolve(response);
           },
           (error) => {
