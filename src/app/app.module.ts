@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchGitComponent } from './search-git/search-git.component';
+import { RepoComponent } from './repo/repo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchGitComponent
+    SearchGitComponent,
+    RepoComponent
   ],
   imports: [
     BrowserModule,
