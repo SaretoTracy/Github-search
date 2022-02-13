@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchGitComponent } from './search-git/search-git.component';
 import { RepoComponent } from './repo/repo.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchGitComponent,
-    RepoComponent
+    RepoComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
