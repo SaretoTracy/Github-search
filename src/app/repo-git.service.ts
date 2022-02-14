@@ -11,15 +11,14 @@ import { environment } from "./../environments/environment";
   providedIn: 'root'
 })
 export class RepoGitService {
-  repo: any;
+  repo:any;
   repoArr: any[] = [];
+  url = "https://api.github.com/users/"
+  
   constructor(private http: HttpClient, private router: Router) {}
   getRepoDetails(user: string) {
     let promise = new Promise((resolve, reject) => {
-      this.http
-        .get<Interrepo[]>(`https://api.github.com/users/${user}/repos`)
-        .toPromise()
-        .then(
+      this.http.get<Interrepo>(this.url + this.repo+ '/repos' ).toPromise().then(
           (response:any) => {
             response.forEach((response:any) => {
               this.repo = new Repositories(

@@ -14,6 +14,7 @@ import { environment } from "./../environments/environment";
 })
 export class GitSerchService {
   userProfile: User;
+  url = 'https://api.github.com/users/'
   constructor(private http: HttpClient, private router: Router) {
     this.userProfile = new User("", "", "", "", 0, 0, 0, "", "", 0, "");
   }
