@@ -18,10 +18,10 @@ export class GitSerchService {
   constructor(private http: HttpClient, private router: Router) {
     this.userProfile = new User("", "", "", "", 0, 0, 0, "", "", 0, "");
   }
-  getSearchResults(user: string) {
+  getSearchResults() {
     let promise = new Promise((resolve, reject) => {
       this.http
-        .get<Interuser>(`https://api.github.com/users/${user}`)
+        .get<any>(this.url + this.userProfile)
         .toPromise()
         .then(
           (response:any) =>{ 
@@ -35,7 +35,7 @@ export class GitSerchService {
             this.userProfile.repositories = response.public_repos;
             this.userProfile.avatarUrl = response.avatar_url;
             this.userProfile.repo_url = response.repos_url;
-            resolve(response);
+            console.log(response)
           },
 
           (error) => {

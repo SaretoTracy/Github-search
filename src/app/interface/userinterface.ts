@@ -1,6 +1,6 @@
 export interface Interuser {
     login: string;
-    name: string;
+    name: any;
     avatar_url: string;
     html_url: string;
     repos_url: string;
