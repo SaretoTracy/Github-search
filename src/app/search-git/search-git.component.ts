@@ -22,12 +22,15 @@ export class SearchGitComponent implements OnInit {
   ) {}
   onSubmit(val: any) {
     if (val.search != "") {
+      console.log(val.search)
       this.gitRepo.repoArr = [];
+
       // this.gitService.getSearchResults(val.search);
       this.gitRepo.getRepoDetails(val.search);
       this.router.navigate(["/repos"]);
     }
   }
+  
 
 
   ngOnInit(): void {

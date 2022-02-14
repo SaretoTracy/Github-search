@@ -18,8 +18,9 @@ export class RepoGitService {
   constructor(private http: HttpClient, private router: Router) {}
   getRepoDetails(user: string) {
     let promise = new Promise((resolve, reject) => {
-      this.http.get<Interrepo>(this.url + this.repo+ '/repos' ).toPromise().then(
+      this.http.get<Interrepo>(this.url + user + '/repos' ).toPromise().then(
           (response:any) => {
+            console.log(response)
             response.forEach((response:any) => {
               this.repo = new Repositories(
                 response.name,
