@@ -5,3 +5,7 @@
 .text-color {
     color: rgb(85, 152, 218);
 }
+
+.navbar {
+    box-shadow: 4px 4px 4px #5c326a;
+}

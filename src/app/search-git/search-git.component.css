@@ -3,6 +3,10 @@
     min-height: 100vh;
 }
 
+.search-form {
+    padding-top: 8rem;
+}
+
 .search {
     border: 1px solid #5c326a;
     padding: 6rem;
