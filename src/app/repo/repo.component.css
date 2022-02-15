@@ -5,7 +5,12 @@
 }
 
 .row {
-    padding-top: 6rem;
+    padding-top: 4rem;
+}
+
+.info {
+    line-height: 3rem;
+    padding-left: 4rem;
 }
 
 .fab {
