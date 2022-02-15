@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
 import { GitsearchFormComponent } from './gitsearch-form/gitsearch-form.component';
 import { HighlightDirective } from './highlight.directive';
+import { TimeAgoPipe } from './time-ago.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HighlightDirective } from './highlight.directive';
     NotfoundComponent,
     NavComponent,
     GitsearchFormComponent,
-    HighlightDirective
+    HighlightDirective,
+    TimeAgoPipe
   ],
   imports: [
     BrowserModule,

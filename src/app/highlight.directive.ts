@@ -8,7 +8,7 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
     constructor(private el: ElementRef) { }
   
     @HostListener('mouseenter') onMouseEnter() {
-      this.highlight('pink');
+      this.highlight('purple');
     }
   
     @HostListener('mouseleave') onMouseLeave() {
