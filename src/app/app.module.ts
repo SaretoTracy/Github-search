@@ -10,6 +10,7 @@ import { NavComponent } from './nav/nav.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
 import { GitsearchFormComponent } from './gitsearch-form/gitsearch-form.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { GitsearchFormComponent } from './gitsearch-form/gitsearch-form.componen
     RepoComponent,
     NotfoundComponent,
     NavComponent,
-    GitsearchFormComponent
+    GitsearchFormComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
