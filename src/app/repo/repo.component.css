@@ -1,5 +1,5 @@
 .container {
-    background-color: black;
+    background-color: #0A192F;
     /* height: 100vh; */
     color: #5c326a;
 }
@@ -22,4 +22,8 @@ span {
 
 p {
     color: #1157C2;
+}
+
+.image {
+    width: 50%;
 }
