@@ -21,7 +21,7 @@ export class GitSerchService {
   getSearchResults() {
     let promise = new Promise((resolve, reject) => {
       this.http
-        .get<any>(this.url + this.userProfile)
+        .get<any>(this.url + User + '/repos')
         .toPromise()
         .then(
           (response:any) =>{ 

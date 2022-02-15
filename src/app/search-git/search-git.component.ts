@@ -22,7 +22,7 @@ export class SearchGitComponent implements OnInit {
   ) {}
   onSubmit(val: any) {
     if (val.search != "") {
-      console.log(val.search)
+    
       this.gitRepo.repoArr = [];
 
       // this.gitService.getSearchResults(val.search);

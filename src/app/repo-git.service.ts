@@ -11,6 +11,9 @@ import { environment } from "./../environments/environment";
   providedIn: 'root'
 })
 export class RepoGitService {
+  getSearchResults(search: any) {
+    throw new Error('Method not implemented.');
+  }
   repo:any;
   repoArr: any[] = [];
   url = "https://api.github.com/users/"
@@ -20,7 +23,6 @@ export class RepoGitService {
     let promise = new Promise((resolve, reject) => {
       this.http.get<Interrepo>(this.url + user + '/repos' ).toPromise().then(
           (response:any) => {
-            console.log(response)
             response.forEach((response:any) => {
               this.repo = new Repositories(
                 response.name,
