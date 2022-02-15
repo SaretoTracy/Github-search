@@ -53,13 +53,13 @@
         </h2>
         <p class="text-dark">{{rep.description}}</p>
         <div class="card-footer d-flex justify-content-between mt-auto">
-          <span class="text-light"
+          <span class="text-dark"
             ><i class="far fa-star text-color"></i> {{rep.star}}</span
           >
-          <span class="text-light"
+          <span class="text-dark"
             ><i class="fas fa-code-branch text-color"></i> {{rep.forks}}</span
           >
-          <span *ngIf="rep.homepage" class="text-light"
+          <span *ngIf="rep.homepage" class="text-dark"
             ><a [href]="rep.homepage" target="_blank"
               ><i class="fas fa-desktop text-color"></i></a
           ></span>
