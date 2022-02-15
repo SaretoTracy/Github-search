@@ -16,22 +16,22 @@ import { RepoGitService } from '../repo-git.service';
 export class SearchGitComponent implements OnInit {
 
   constructor(
-    private gitService: GitSerchService,
-    private gitRepo: RepoGitService,
-    private router: Router
+    // private gitService: GitSerchService,
+    // private gitRepo: RepoGitService,
+    // private router: Router
   ) {}
-  onSubmit(val: any) {
-    console.log(val)
-    console.log(val.search)
-    if (val.search != "") {
+  // onSubmit(val: any) {
+  //   console.log(val)
+  //   console.log(val.search)
+  //   if (val.search != "") {
     
-      this.gitRepo.repoArr = [];
+  //     this.gitRepo.repoArr = [];
 
-      this.gitService.getSearchResults(val.search);
-      this.gitRepo.getRepoDetails(val.search);
-      this.router.navigate(["/repos"]);
-    }
-  }
+  //     this.gitService.getSearchResults(val.search);
+  //     this.gitRepo.getRepoDetails(val.search);
+  //     this.router.navigate(["/repos"]);
+  //   }
+  // }
   
 
 
