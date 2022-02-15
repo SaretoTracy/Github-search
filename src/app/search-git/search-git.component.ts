@@ -21,11 +21,13 @@ export class SearchGitComponent implements OnInit {
     private router: Router
   ) {}
   onSubmit(val: any) {
+    console.log(val)
+    console.log(val.search)
     if (val.search != "") {
     
       this.gitRepo.repoArr = [];
 
-      // this.gitService.getSearchResults(val.search);
+      this.gitService.getSearchResults(val.search);
       this.gitRepo.getRepoDetails(val.search);
       this.router.navigate(["/repos"]);
     }

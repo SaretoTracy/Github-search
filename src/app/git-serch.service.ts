@@ -18,10 +18,10 @@ export class GitSerchService {
   constructor(private http: HttpClient, private router: Router) {
     this.userProfile = new User("", "", "", "", 0, 0, 0, "", "", 0, "");
   }
-  getSearchResults() {
+  getSearchResults(search:string) {
     let promise = new Promise((resolve, reject) => {
       this.http
-        .get<any>(this.url + User + '/repos')
+        .get<any>(this.url + search + "?access_token'=" + environment.personal_AccessToken)
         .toPromise()
         .then(
           (response:any) =>{ 
