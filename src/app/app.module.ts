@@ -9,6 +9,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { NavComponent } from './nav/nav.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from "@angular/common/http";
     SearchGitComponent,
     RepoComponent,
     NotfoundComponent,
-    NavComponent
+    NavComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

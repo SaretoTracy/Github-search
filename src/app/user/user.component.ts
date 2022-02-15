@@ -9,20 +9,18 @@ import { GitSerchService } from '../git-serch.service';
 import { RepoGitService } from '../repo-git.service';
 
 @Component({
-  selector: 'app-repo',
-  templateUrl: './repo.component.html',
-  styleUrls: ['./repo.component.css']
+  selector: 'app-user',
+  templateUrl: './user.component.html',
+  styleUrls: ['./user.component.css']
 })
-export class RepoComponent implements OnInit {
-  // userProfile!: User;
-  rep: any[] = [];
+export class UserComponent implements OnInit {
+  userProfile!: User;
   constructor(
-    // private gitService: GitSerchService,
-    private gitRepoService: RepoGitService
-  ) {}
+    private gitService: GitSerchService
+  ) { }
 
   ngOnInit(): void {
-    // this.userProfile = this.gitService.userProfile;
-    this.rep = this.gitRepoService.repoArr;
+    this.userProfile = this.gitService.userProfile;
   }
+
 }
