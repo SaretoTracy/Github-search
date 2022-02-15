@@ -10,6 +10,7 @@ import { NavComponent } from './nav/nav.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
 import { UserComponent } from './user/user.component';
+import { GitsearchFormComponent } from './gitsearch-form/gitsearch-form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { UserComponent } from './user/user.component';
     RepoComponent,
     NotfoundComponent,
     NavComponent,
-    UserComponent
+    UserComponent,
+    GitsearchFormComponent
   ],
   imports: [
     BrowserModule,
