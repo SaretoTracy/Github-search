@@ -2,6 +2,10 @@
     padding-top: 10rem;
 }
 
+.col-7 {
+    border-left: 3px solid #5c326a;
+}
+
 .search {
     border: 1px solid #5c326a;
     padding: 6rem;
