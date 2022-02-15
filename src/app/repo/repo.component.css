@@ -1,15 +1,13 @@
 .container {
     background-color: black;
-    color: red;
     /* height: 100vh; */
+    color: #5c326a;
 }
 
 .main {
     background-color: black;
-    height: 100vh;
 }
 
-.repo {
-    background-color: black;
-    color: red;
+.fab {
+    color: #5c326a;
 }
