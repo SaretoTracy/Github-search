@@ -7,6 +7,8 @@ import { Interrepo } from '../interface/repointerface';
 import { Interuser } from '../interface/userinterface';
 import { GitSerchService } from '../git-serch.service';
 import { RepoGitService } from '../repo-git.service';
+import { NgForm } from '@angular/forms';
+
 
 
 @Component({
@@ -15,7 +17,7 @@ import { RepoGitService } from '../repo-git.service';
   styleUrls: ['./gitsearch-form.component.css']
 })
 export class GitsearchFormComponent implements OnInit {
-
+  search!:string;
   constructor(
     private gitService: GitSerchService,
     private gitRepo: RepoGitService,
@@ -24,17 +26,15 @@ export class GitsearchFormComponent implements OnInit {
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
-  onSubmit(val: any) {
-    console.log(val)
-    console.log(val.search)
-    if (val.search != "") {
-    
+  onSubmit() {
+     console.log(this.search)
+  
       this.gitRepo.repoArr = [];
 
-      this.gitService.getSearchResults(val.search);
-      this.gitRepo.getRepoDetails(val.search);
-      this.router.navigate(["/repos"]);
-    }
+      this.gitService.getSearchResults(this.search);
+      this.gitRepo.getRepoDetails(this.search);
+      this.router.navigate(["repo"]);
+    
   }
  
 

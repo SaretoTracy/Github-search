@@ -8,21 +8,22 @@ import { Interuser } from '../interface/userinterface';
 import { GitSerchService } from '../git-serch.service';
 import { RepoGitService } from '../repo-git.service';
 
+
 @Component({
   selector: 'app-repo',
   templateUrl: './repo.component.html',
   styleUrls: ['./repo.component.css']
 })
 export class RepoComponent implements OnInit {
-  // userProfile!: User;
+  userProfile!: User;
   rep: any[] = [];
   constructor(
-    // private gitService: GitSerchService,
+    private gitService: GitSerchService,
     private gitRepoService: RepoGitService
   ) {}
 
   ngOnInit(): void {
-    // this.userProfile = this.gitService.userProfile;
+    this.userProfile = this.gitService.userProfile;
     this.rep = this.gitRepoService.repoArr;
   }
 }

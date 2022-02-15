@@ -9,7 +9,6 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { NavComponent } from './nav/nav.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
-import { UserComponent } from './user/user.component';
 import { GitsearchFormComponent } from './gitsearch-form/gitsearch-form.component';
 
 @NgModule({
@@ -19,7 +18,6 @@ import { GitsearchFormComponent } from './gitsearch-form/gitsearch-form.componen
     RepoComponent,
     NotfoundComponent,
     NavComponent,
-    UserComponent,
     GitsearchFormComponent
   ],
   imports: [
