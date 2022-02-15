@@ -3,16 +3,16 @@ website where users may enter a GitHub username into a form, submit it, and see 
  
 
 ## Built With
--HTML
--CSS
--Bootstrap
--Javascript
--Typscript
--Angular CLI version 13.2.0.
+- HTML
+- CSS
+- Bootstrap
+- Javascript
+- Typscript
+- Angular CLI version 13.2.0.
 
 ## Live Demo
 
-[Live Demo Link] https://
+[Live Demo Link] https://saretotracy.github.io/Github-search/
 
 
 ## Getting Started
@@ -27,17 +27,23 @@ A computer with a working and up to date web browser.
 
 - Clone the repository to your folder of choice using Git (or just download all the files)
 ```
-$ git clone https://
+$ git clone https://saretotracy.github.io/Github-search/
 ```
 - Open the index.html file (in the root folder) and the website should show up.
 
 
 ### BDD
-- Objectives
-1.
-2. 
-3. 
-4. 
+
+#### Context
+
+when a user types in a username when that username already exists on github, and then clicks the search button
+The app should ask for the user's information and then present it on a new route to the user.
+
+#### objectives
+1. Can Enter and submit user name.
+2. Submit button Starts the app.
+3. Routing is done on submit.
+4. Details are visible including repos
 ## Author
 
 👤 **Author**
